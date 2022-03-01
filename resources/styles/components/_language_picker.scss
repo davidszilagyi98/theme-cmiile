@@ -1,0 +1,36 @@
+header.site-header ul.sub-menu li {
+  &.flag {
+    text-align: center;
+    padding: 0 1rem;
+
+    a {
+      padding: 0;
+      font-size: small;
+
+      @include media(tablet) {
+        font-size: medium;
+      }
+    }
+
+    a::before {
+      content: "";
+      display: block;
+      height: 40px;
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+    }
+
+    &.english {
+      a::before {
+        background-image: url("https://localhost/wp-content/themes/cmiile/assets/images/us.png");
+      }
+    }
+
+    &.danish {
+      a::before {
+        background-image: url("https://localhost/wp-content/themes/cmiile/assets/images/dk.png");
+      }
+    }
+  }
+}

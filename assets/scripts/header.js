@@ -1,0 +1,1 @@
+$(window).on("scroll",(function(){const l=$(window).scrollTop(),s=$(".site-header");l&&l>=500?s.addClass("small"):s.removeClass("small")}));

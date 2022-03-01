@@ -1,0 +1,111 @@
+.woocommerce,
+.woocommerce-page {
+  a.button {
+    outline: none;
+    border-radius: 5px;
+  }
+
+  #respond input#submit.alt,
+  a.button.alt,
+  button.button.alt,
+  input.button.alt {
+    background-color: $color-3;
+    border-radius: 5px;
+    outline: none;
+
+    &:hover {
+      background-color: $color-1;
+    }
+  }
+
+  .woocommerce-customer-details address {
+    padding: 1rem;
+    border-radius: 5px;
+    box-sizing: border-box;
+  }
+
+  #respond input#submit.alt.disabled,
+  #respond input#submit.alt.disabled:hover,
+  #respond input#submit.alt:disabled,
+  #respond input#submit.alt:disabled:hover,
+  #respond input#submit.alt:disabled[disabled],
+  #respond input#submit.alt:disabled[disabled]:hover,
+  a.button.alt.disabled,
+  a.button.alt.disabled:hover,
+  a.button.alt:disabled,
+  a.button.alt:disabled:hover,
+  a.button.alt:disabled[disabled],
+  a.button.alt:disabled[disabled]:hover,
+  button.button.alt.disabled,
+  button.button.alt.disabled:hover,
+  button.button.alt:disabled,
+  button.button.alt:disabled:hover,
+  button.button.alt:disabled[disabled],
+  button.button.alt:disabled[disabled]:hover,
+  input.button.alt.disabled,
+  input.button.alt.disabled:hover,
+  input.button.alt:disabled,
+  input.button.alt:disabled:hover,
+  input.button.alt:disabled[disabled],
+  input.button.alt:disabled[disabled]:hover {
+    background-color: rgba($color-1, 0.5);
+    border-radius: 5px;
+  }
+
+  .quantity {
+    .qty {
+      height: 1.75rem;
+    }
+  }
+
+  .woocommerce-variation-add-to-cart {
+    padding: 1rem 0;
+    display: flex;
+  }
+
+  form {
+    .form-row {
+      margin-bottom: 1.5rem;
+
+      input.woocommerce-Input,
+      input.input-text,
+      textarea,
+      select,
+      .dropdown__filter {
+        border-radius: 5px;
+        border: 1px solid $color-6;
+        padding: 1rem;
+        font-size: $font_size_sm;
+        font-family: inherit;
+      }
+
+      em {
+        font-size: $font_size_xs;
+        margin-left: 1rem;
+      }
+
+      .iti--separate-dial-code .iti__selected-flag {
+        border-radius: 16px 0 0 16px;
+      }
+    }
+
+    &.comment-form textarea#comment,
+    &.woocommerce-form-login,
+    &.woocommerce-form-register {
+      border-radius: 5px;
+      border: 1px solid $color-6;
+    }
+  }
+
+  fieldset {
+    border-radius: 5px;
+    border: 1px solid $color-6;
+    padding: 2rem;
+    display: contents;
+  }
+
+  table.shop_table {
+    border-radius: 5px;
+    padding: 1rem;
+  }
+}

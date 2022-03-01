@@ -1,0 +1,67 @@
+.wp-block-buttons {
+  gap: 1rem;
+  margin: 1rem 0;
+
+  > .wp-block-button {
+    &.light {
+      a {
+        background-color: $color-3;
+
+        &:hover {
+          background-color: $color-5;
+          color: $color-2;
+        }
+      }
+    }
+
+    a {
+      background-color: $color-3;
+      border-radius: 5px;
+      text-transform: uppercase;
+      font-family: $font-heading;
+      transition: all 0.3s;
+      padding: 0.75rem 1.5rem;
+      color: $color-5;
+
+      &:hover {
+        background-color: $color-2;
+        color: $color-5;
+      }
+    }
+  }
+}
+
+.btn,
+.woocommerce button.button,
+.woocommerce a.button,
+.woocommerce #review_form #respond .form-submit input,
+.woocommerce .cart .button {
+  background-color: $color-3;
+  color: $color-5;
+  border-radius: 10px;
+  text-transform: uppercase;
+  transition: all 0.3s;
+  padding: 0.75rem 1.5rem;
+  text-align: center;
+  text-decoration: none;
+  width: fit-content;
+
+  &:disabled[disabled] {
+    color: $color-5;
+  }
+
+  &:hover {
+    background-color: $color-2;
+    color: $color-5;
+  }
+
+  &.light {
+    background-color: $color-3;
+    color: $color-5;
+
+    &:hover {
+      background-color: $color-5;
+      color: $color-2;
+    }
+  }
+}

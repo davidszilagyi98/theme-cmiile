@@ -1,0 +1,51 @@
+body main .content article > .entry-content div.wp-block-columns.faq-section {
+  padding-bottom: 0;
+
+  .wp-block-column:nth-child(1) {
+    h2 {
+      color: $color-3;
+      font-size: larger;
+      text-align: center;
+    }
+  }
+
+  .wp-block-column:nth-child(2) {
+    @include media(desktop) {
+      margin-top: 5rem;
+    }
+
+    > h2 {
+      background: lighten($color-6, 5%);
+      padding: 1rem 1.5rem;
+      cursor: pointer;
+      font-size: large;
+      display: flex;
+      justify-content: space-between;
+
+      &::after {
+        content: "\f106";
+        font-family: $font-icon;
+      }
+
+      &.closed::after {
+        content: "\f107";
+        font-family: $font-icon;
+      }
+    }
+
+    > :not(h2) {
+      margin: 0 1rem;
+      overflow: hidden;
+      position: relative;
+      -webkit-transition: 1.5s ease;
+      -moz-transition: 1.5s ease;
+      -o-transition: 1.5s ease;
+      transition: 1s ease;
+
+      &.hide {
+        height: 0;
+        opacity: 0;
+      }
+    }
+  }
+}

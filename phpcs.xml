@@ -1,0 +1,8 @@
+<?xml version="1.0"?>
+<ruleset name="tillty">
+    <description>tillty rules for PHP_CodeSniffer</description>
+    <!-- ##### WordPress sniffs #####-->
+    <rule ref="WordPress">
+        <exclude name="WordPress.WP.I18n.NonSingularStringLiteralDomain" />
+    </rule>
+</ruleset>

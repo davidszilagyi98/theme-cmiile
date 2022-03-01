@@ -1,0 +1,131 @@
+body {
+  margin: 0;
+
+  *:focus {
+    outline: none;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    -webkit-tap-highlight-color: transparent;
+  }
+
+  &.center {
+    .entry-header {
+      text-align: center;
+    }
+  }
+
+  .content-area {
+    @extend .page-limits;
+    padding: 6rem 0;
+
+    main {
+      grid-column: main;
+    }
+  }
+
+  main {
+    &.has-hero {
+      .hero {
+        margin-top: 4rem;
+      }
+
+      .content {
+        padding: 0rem 0;
+      }
+    }
+
+    .content {
+      padding: 4rem 0 2rem 0;
+      article {
+        .entry-header {
+          @extend .page-limits;
+          margin-top: 2rem;
+
+          .entry-title {
+            grid-column: main;
+          }
+        }
+        .wp-block-columns.infographics {
+          background-color: #e7eef4ff;
+          grid-column-start: 1;
+          grid-column-end: -1;
+          padding: 3rem;
+          text-align: center;
+          i.fas {
+            font-size: 3rem;
+            margin-top: 2rem;
+            margin-top: 0rem;
+          }
+        }
+
+        > .entry-content {
+          @extend .page-limits;
+
+          > * {
+            grid-column: main;
+            margin-bottom: 0;
+            padding: 2rem 0;
+          }
+
+          div.wp-block-columns {
+            padding: 5rem 0;
+          }
+
+          div.wp-block-columns.faq {
+            padding: 0;
+          }
+
+          .full-width {
+            grid-column: full;
+          }
+
+          .max-width {
+            grid-column: full;
+            justify-self: center;
+            max-width: $page_max_width;
+            margin: 0 1.5rem;
+
+            @include media(tablet) {
+              margin: 0 2.5rem;
+            }
+          }
+
+          .bg-blue {
+            background-color: $color-2;
+            color: $color-5;
+
+            h1,
+            h2,
+            h3,
+            h4,
+            h5,
+            h6 {
+              color: $color-5;
+            }
+          }
+
+          .section-heading {
+            @extend .page-limits;
+            padding: 2rem 0;
+
+            > * {
+              grid-column: main;
+            }
+          }
+
+          .section {
+            padding: 5rem 0;
+          }
+
+          .shadow,
+          .shadow-inner > * {
+            box-shadow: 5px 5px 20px rgba($color-1, 5%);
+          }
+        }
+
+        img {
+          height: auto;
+        }
+      }
+    }
+  }
+}

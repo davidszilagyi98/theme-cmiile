@@ -1,0 +1,33 @@
+.woocommerce-account {
+  ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+
+    li.woocommerce-MyAccount-navigation-link {
+      border-radius: 5px;
+      background-color: $color-3;
+      margin: 0.5rem 0;
+
+      &:first-child {
+        margin-top: 0;
+      }
+
+      &:last-child {
+        margin-bottom: 0;
+      }
+
+      &.is-active {
+        background-color: $color-4;
+      }
+
+      a {
+        color: $color-5;
+        text-transform: uppercase;
+        text-decoration: none;
+        display: block;
+        padding: 0.5rem 1rem;
+      }
+    }
+  }
+}

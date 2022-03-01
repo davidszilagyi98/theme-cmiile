@@ -1,0 +1,1 @@
+!function(){function e(){document.querySelectorAll('[src^="https://www.youtube.com/embed/"]').forEach((e=>{e.width="100%",e.height=e.clientWidth/16*9}))}window.addEventListener("resize",(()=>{e()})),e()}();

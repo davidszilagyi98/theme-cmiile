@@ -1,0 +1,59 @@
+@use "sass:math";
+
+@font-face {
+  font-family: "Lato Regular";
+  font-display: swap;
+  src: url(../../fonts/Lato/Lato-Regular.woff2) format("woff2");
+}
+
+@font-face {
+  font-family: "Poppins Bold";
+  font-display: swap;
+  src: url(../../fonts/Poppins/Poppins-Bold.woff2) format("woff2");
+}
+
+$font-heading: "Poppins Bold";
+$font-body: "Lato Regular";
+$font-icon: "Font Awesome 5 Free";
+$font-size-base: 14px;
+$font-size-ratio: 1.25;
+$font-line-height-body: 1.8;
+$font-line-height-heading: 1.2;
+
+$font-size-xxs: math.div(1em, 1.5 * $font-size-ratio);
+$font-size-xs: math.div(1em, 1.25 * $font-size-ratio);
+$font-size-sm: math.div(1em, 1 * $font-size-ratio);
+$font-size-md: 1em * (1 * $font-size-ratio);
+$font-size-lg: 1em * (1.25 * $font-size-ratio);
+$font-size-xl: 1em * (1.5 * $font-size-ratio);
+$font-size-xxl: 1em * (1.75 * $font-size-ratio);
+$font-size-xxxl: 1em * (2 * $font-size-ratio);
+
+$font-heading-sizes: ($font-size-xxl, $font-size-xl, $font-size-lg, $font-size-md, $font-size-sm, $font-size-xs);
+
+@for $i from 1 through 6 {
+  h#{$i} {
+    font-family: $font-heading;
+    font-size: nth($font-heading-sizes, $i);
+    font-weight: 700;
+    color: $color-2;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    hyphens: auto;
+  }
+}
+
+body {
+  font-family: $font-body;
+  line-height: $font-line-height-body;
+  font-size: $font-size-base;
+  color: $color-2;
+
+  @include media(tablet) {
+    font-size: $font-size-base * $font-size-ratio;
+  }
+
+  a {
+    color: $color-3;
+  }
+}

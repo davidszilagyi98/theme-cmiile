@@ -1,0 +1,58 @@
+@import "./mobile-navigation";
+@import "./desktop-navigation";
+
+body {
+  header.site-header {
+    @extend .page-limits;
+    display: grid !important;
+    position: fixed;
+    top: 0;
+    z-index: 10;
+    background-color: $color-5;
+    box-shadow: 2px 2px 12px 0 rgb(0 0 0 / 50%);
+    text-transform: uppercase;
+
+    .site-header-content {
+      display: grid;
+      grid-template-columns: 1fr auto;
+      grid-column: main;
+      align-items: center;
+      position: relative;
+      padding: 0.5rem 0;
+
+      a.logo {
+        max-width: 100px;
+        transition: all 1s;
+
+        img {
+          padding: 1rem 0;
+          width: 100%;
+          height: auto;
+          vertical-align: middle;
+        }
+      }
+    }
+
+    &.small {
+      .site-header-content {
+        a.logo {
+          max-width: 75px;
+        }
+      }
+    }
+  }
+
+  &.admin-bar {
+    header.site-header {
+      top: 46px;
+
+      @media only screen and (min-width: 783px) {
+        top: 32px;
+      }
+    }
+  }
+
+  #wpadminbar {
+    position: fixed;
+  }
+}

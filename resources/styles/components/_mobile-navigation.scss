@@ -1,0 +1,186 @@
+@import '~hamburgers/_sass/hamburgers/hamburgers';
+
+header.site-header {
+	button.hamburger {
+		display: flex;
+		z-index: 11;
+		justify-self: end;
+
+		.hamburger-box {
+			.hamburger-inner,
+			.hamburger-inner::after,
+			.hamburger-inner::before {
+				background-color: $color-4;
+			}
+		}
+
+		&.is-active {
+			.hamburger-box {
+				.hamburger-inner,
+				.hamburger-inner::after,
+				.hamburger-inner::before {
+					background-color: $color-4;
+				}
+			}
+		}
+
+		@include media(tablet) {
+			display: none;
+		}
+	}
+
+	.mobile-nav-overlay {
+		display: none;
+		position: fixed;
+		top: 0;
+		left: 0;
+		width: 100vw;
+		height: 100vh;
+		background-color: rgba($color-1, 0.6);
+		animation: overlay-show 0.5s ease;
+
+		@keyframes overlay-show {
+			0% {
+				opacity: 0;
+			}
+
+			100% {
+				opacity: 1;
+			}
+		}
+	}
+
+	nav.mobile-primary {
+		display: grid;
+		grid-template-rows: 1fr 1fr 1fr;
+		overflow-y: scroll;
+		position: fixed;
+		top: 0;
+		right: -25rem;
+		bottom: 0;
+		width: 20rem;
+		height: calc(100vh - calc(100vh - 100%));
+		background-color: $color-5;
+		transition: all 650ms ease-in-out;
+		grid-auto-rows: auto 1fr auto;
+		-webkit-overflow-scrolling: touch;
+		align-items: center;
+
+		@include media(tablet) {
+			display: none;
+		}
+
+		/* Hide scrollbar */
+		-ms-overflow-style: none; /* IE and Edge */
+		scrollbar-width: none; /* Firefox */
+
+		/* Hide scrollbar for Chrome, Safari and Opera */
+		&::-webkit-scrollbar {
+			display: none;
+		}
+
+		&.open {
+			right: 0;
+		}
+
+		.menu-top {
+			align-self: start;
+			margin: 6rem 0 3rem 0;
+
+			.mobile-nav-header {
+				display: grid;
+				justify-content: center;
+			}
+		}
+
+		ul {
+			list-style: none;
+			padding: 1rem 2rem;
+			margin: 0;
+
+			li {
+				text-align: center;
+				display: inline;
+
+				a {
+					display: block;
+					position: relative;
+					color: $color-4;
+					text-decoration: none;
+					line-height: 3;
+					padding: 0;
+					font-size: large;
+				}
+
+				&.menu-item-has-children {
+					> a {
+						&::after {
+							position: absolute;
+							right: 0;
+							height: 100%;
+							font-family: $font-icon;
+							content: '\f107';
+							transition: 0.5s;
+						}
+					}
+
+					&.open {
+						> a {
+							&::after {
+								transform: scaleY(-1);
+							}
+						}
+					}
+				}
+			}
+
+			&.menu-primary {
+				> li:last-child {
+					a {
+						padding: 0;
+						margin: 3rem 0 0 0;
+						background-color: $color-4;
+						color: $color-5;
+						border-radius: 10px;
+					}
+				}
+			}
+
+			&.sub-menu {
+				display: none;
+
+				&:last-child {
+					a {
+						padding: 0;
+						margin: 0;
+					}
+				}
+			}
+		}
+
+		.menu-bottom {
+			padding: 1rem;
+			align-self: end;
+			justify-self: center;
+			text-align: center;
+			font-size: smaller;
+			color: $color-4;
+
+			.social-icons {
+				a {
+					text-decoration: none;
+					color: $color-4;
+
+					i {
+						padding: 1rem 0.5rem;
+						font-size: xx-large;
+					}
+
+					&:hover {
+						color: $color-2;
+					}
+				}
+			}
+		}
+	}
+}

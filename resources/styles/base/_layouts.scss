@@ -1,0 +1,51 @@
+$mobile_width: 600px;
+$tablet_width: 1024px;
+$desktop_width: 1168px;
+$wide_width: 1379px;
+
+$page_width: 1400px;
+$page_max_width: 2000px;
+
+@mixin media($res) {
+	@if mobile == $res {
+		@media only screen and (min-width: $mobile_width) {
+			@content;
+		}
+	}
+
+	@if tablet == $res {
+		@media only screen and (min-width: $tablet_width) {
+			@content;
+		}
+	}
+
+	@if desktop == $res {
+		@media only screen and (min-width: $desktop_width) {
+			@content;
+		}
+	}
+
+	@if wide == $res {
+		@media only screen and (min-width: $wide_width) {
+			@content;
+		}
+	}
+}
+
+.page-limits {
+	display: grid;
+	margin: auto;
+	width: 100%;
+
+	grid-template-columns:
+		[full-start] minmax(1.5rem, 1fr)
+		[main-start] minmax(0, $page_width) [main-end]
+		minmax(1.5rem, 1fr) [full-end];
+
+	@include media(tablet) {
+		grid-template-columns:
+			[full-start] minmax(2.5rem, 1fr)
+			[main-start] minmax(0, $page_width) [main-end]
+			minmax(2.5rem, 1fr) [full-end];
+	}
+}

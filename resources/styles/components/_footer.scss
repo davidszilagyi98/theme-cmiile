@@ -1,0 +1,115 @@
+footer {
+  background-color: $color-3;
+
+  .footer-widgets {
+    @extend .page-limits;
+    padding: 2rem 0;
+
+    .footer-widgets-wrapper {
+      grid-column: main;
+      display: grid;
+      grid-template-columns: 1fr;
+      color: $color-5;
+
+      @include media(tablet) {
+        grid-template-columns: repeat(4, 1fr) auto;
+      }
+
+      .widget-title {
+        color: $color-5;
+        margin-top: 0;
+        font-size: x-large;
+      }
+
+      address {
+        margin-bottom: 0rem;
+        font-style: normal;
+      }
+
+      .card-icons {
+        margin-top: 1rem;
+      }
+
+      .opening-hours {
+        .row {
+          display: flex;
+          justify-content: space-between;
+        }
+      }
+
+      a {
+        display: block;
+        color: $color-5;
+        text-decoration: none;
+        line-height: 2;
+        transition: color 0.5s;
+
+        &:hover {
+          color: $color-4;
+        }
+
+        i {
+          padding-right: 1rem;
+        }
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+
+        li {
+          list-style: none;
+        }
+      }
+
+      hr {
+        width: 60px;
+        margin: 0 0 1rem 0;
+        border: 0;
+        border-top: 5px solid $color-5;
+        border-radius: 5px;
+      }
+
+      .social {
+        font-size: 4rem;
+
+        a {
+          display: inline-block;
+          color: $color-5;
+
+          &:nth-child(even) {
+            padding: 0 0.5rem;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    @extend .page-limits;
+    background-color: darken($color-2, 5%);
+    color: rgba($color-5, 0.5);
+    padding: 0.5rem 0;
+    font-size: small;
+
+    .copyright-wrapper {
+      grid-column: main;
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+
+      .tillty {
+        justify-self: end;
+
+        svg {
+          height: 1rem;
+          width: auto;
+          vertical-align: middle;
+
+          path {
+            fill: rgba($color-5, 0.5);
+          }
+        }
+      }
+    }
+  }
+}

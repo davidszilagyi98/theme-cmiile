@@ -1,0 +1,37 @@
+body main .content article .entry-content {
+  .full-width-section {
+    display: grid;
+    grid-template-columns: [full-start] minmax(2.5rem, 1fr) [main-start] minmax(0, 1400px) [main-end] minmax(2.5rem, 1fr) [full-end];
+    grid-column: full;
+    background-color: $color-6;
+
+    > div {
+      grid-area: main;
+    }
+
+    .wp-block-columns {
+      margin: 0;
+      padding: 2rem 0;
+
+      .wp-block-column {
+        text-align: center;
+        margin: 2rem 0;
+
+        @include media(tablet) {
+          margin: 0;
+        }
+
+        h4 {
+          margin-bottom: 0;
+        }
+
+        i {
+          text-align: center;
+          font-size: 5rem;
+          color: $color-4;
+          margin: 0;
+        }
+      }
+    }
+  }
+}

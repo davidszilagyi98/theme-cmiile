@@ -1,0 +1,50 @@
+// // review comments ----------
+
+// li.review {
+//   margin: 1rem;
+//   display: -webkit-inline-box;
+//   width: 100%;
+// }
+
+// // comment text area
+// div.comment-text {
+//   border: 1px solid $color-1;
+//   border-radius: 3px;
+//   width: 70%;
+//   padding: 1rem;
+// }
+
+// // REVIEW AVATAR
+// img.avatar {
+//   margin-right: 1rem;
+//   border-radius: 3px;
+// }
+
+// // div for name and date
+// div.meta-div {
+//   display: flex;
+// }
+
+// // dash between name and date
+// span.woocommerce-review__dash {
+//   padding: 0.85rem;
+//   @include media(tablet) {
+//     padding: 1.2rem;
+//   }
+// }
+.woocommerce-Reviews {
+  div#comments {
+    width: 90%;
+  }
+  .comment-text {
+    &.span {
+      color: $color-4;
+    }
+  }
+}
+
+.woocommerce .star-rating span {
+  color: $color-4;
+}
+
+

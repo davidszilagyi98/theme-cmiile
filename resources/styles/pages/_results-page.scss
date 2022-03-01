@@ -1,0 +1,15 @@
+// CHECKMARK ON RESULTS PAGE
+.wp-block-media-text__content {
+  ul {
+    list-style: none;
+    li {
+      &::before {
+        font-family: $font-icon;
+        content: "\f00c";
+        color: $color-3;
+        font-weight: 600;
+        margin-right: 1rem;
+      }
+    }
+  }
+}
